@@ -1,5 +1,7 @@
 var mongoose=require("mongoose");
-var dbURI= "mongodb+srv://alperenakkal06:Sifre@mekanbul.eiaeh9v.mongodb.net/?retryWrites=true&w=majority";
+var dbURI="mongodb+srv://alperenakkal06:tqHMKHtf4PQYsHrH@mekanbul.eiaeh9v.mongodb.net/mekanbul";
+
+
 mongoose.connect(dbURI);
 mongoose.connection.on("connected",function(){
     console.log(dbURI+" adresine bağlandı");

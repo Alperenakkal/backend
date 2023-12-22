@@ -22,5 +22,5 @@ var venue= new mongoose.Schema({
     comments:[comment]
 
 });
-mongoose.model("venue",venue,"mekanlar")
+mongoose.model("venue",venue,"venues")
 
