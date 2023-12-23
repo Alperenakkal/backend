@@ -1,5 +1,8 @@
 var mongoose=require("mongoose");
 var Venue =mongoose.model("venue");
+export const config = {
+    runtime: 'nodejs', // this is a pre-requisite
+  };
 var converter=(function(){
     var earthRadius=6371; //km
     var radian2Kilometer =function (radian){

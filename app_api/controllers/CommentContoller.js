@@ -1,6 +1,8 @@
 var mongoose=require("mongoose");
 var Venue =mongoose.model("venue");
-
+export const config = {
+    runtime: 'nodejs', // this is a pre-requisite
+  };
 const createResponse=function(res,status,content){
     res.status(status).json(content);
 }
