@@ -1,8 +1,6 @@
 var mongoose=require("mongoose");
 var Venue =mongoose.model("venue");
-export const config = {
-    runtime: 'nodejs', // this is a pre-requisite
-  };
+
 var converter=(function(){
     var earthRadius=6371; //km
     var radian2Kilometer =function (radian){
@@ -79,8 +77,16 @@ const getVenue= async function(req,res){
 const updateVenue=function(req,res){
     createResponse(res,200,{"status":"Başarılı"});
 }
-const deleteVenue=function(req,res){
-    createResponse(res,200,{"status":"Başarılı"});
+const deleteVenue= async function(req,res){
+    try{
+        await Venue.findByIdAndDelete(req.params.venueid).exec()
+        .then(function(venue){
+            createResponse(res,200,venue)
+        });
+
+    }catch(error){
+        createResponse(res,404,{status:"Böyle Bir mekan yok"});
+    }
 }
 module.exports={
     listVenues,
