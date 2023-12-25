@@ -8,3 +8,5 @@ Mekanbul Apı'leri
 
 3.ID'ye Göre yorum getir: https://backend-dusky-seven.vercel.app/api/venues/6585e27d1da86c7985c99691/comments/6585e296de5f5700e164a725
 ![Screenshot](Id'yegorrcomments.png)
+
+(Alperen Akal)
